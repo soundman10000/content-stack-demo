@@ -2,7 +2,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--pad-md);
+  padding: var(--pad-xs);
+}
+.left {
+  display: flex;
+  width: 66.67%;
+  align-items: center;
+}
+.right {
+  display: flex;
+  width: 33.33%;
+  justify-content: right;
 }
 .logo {
   width: 200px;

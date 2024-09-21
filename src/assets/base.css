@@ -22,12 +22,18 @@
   --empyrean-blue: #0077b7;
   --empyrean-blue-light: #8ed1fc;
 
+  --env-local: #ffdc00;
+
   --pad-lg: 2rem;
   --pad-md: 1rem;
+  --pad-sm: 0.8rem;
+  --pad-xs: 8px;
   --pad-floor: 4px;
 
   --margin-lg: 2rem;
   --margin-md: 1rem;
+  --margin-sm: 0.8rem;
+  --margin-xs: 8px;
   --margin-floor: 4px;
 }
 
