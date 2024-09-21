@@ -4,11 +4,16 @@ import HomeHeader from './components/header/component.vue'
 </script>
 
 <template>
-  <header>
-    <div>
-      <HomeHeader />
-    </div>
+  <header class="header">
+    <HomeHeader />
   </header>
 
   <RouterView />
 </template>
+
+<style scoped>
+.header {
+  color: var(--empyrean-blue);
+  background-color: var(--empyrean-blue-light);
+}
+</style>

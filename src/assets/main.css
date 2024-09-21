@@ -1,7 +1,6 @@
 @import './base.css';
 
 #app {
-  padding: var(--pad-md);
   font-weight: normal;
 }
 
