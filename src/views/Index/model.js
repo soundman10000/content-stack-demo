@@ -10,8 +10,8 @@ export const getContent = csClient =>
   .then(addTags('index'))
   .then(toContentModel('welcome_banner'))
 
-export const toViewModel = state => content => {
-  state.content = content
+export const toViewModel = state => data => content => {
+  data.content = content
   state.loaded = true
 }
 
