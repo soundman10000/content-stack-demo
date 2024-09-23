@@ -11,7 +11,6 @@ export const getContent = csClient =>
   .then(toContentModel('welcome_banner'))
 
 export const toViewModel = state => content => {
-  console.log(content)
   state.content = content
   state.loaded = true
 }

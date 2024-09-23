@@ -18,7 +18,7 @@ getContent(csClient).then(onSucess(state), onError)
 <template>
   <header class="hero" v-if="state.loaded">
     <div class="hero-content">
-      <h1 data-cslp="index.blt05b254af46ef63c2.en-us.welcome_banner">
+      <h1 :data-cslp="state.content.welcome_banner.tag">
         {{ state.content.welcome_banner.text }}
       </h1>
     </div>
