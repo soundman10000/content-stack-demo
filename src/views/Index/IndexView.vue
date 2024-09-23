@@ -6,9 +6,6 @@
       </h1>
     </div>
   </header>
-  <div>
-    <h1 class="welcomeBanner"></h1>
-  </div>
 </template>
 
 <script>
