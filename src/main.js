@@ -9,6 +9,11 @@ import ContentstackLivePreview from '@contentstack/live-preview-utils';
 const csDeliveryClient = Contentstack.Stack({
   api_key: 'bltdb934e0566fb4e97',
   delivery_token: 'cs9e60330fee7c946161d14fe7',
+  live_preview: {
+    enable: true,
+    host: "rest-preview.contentstack.com", 
+    preview_token: "cs4df90fb20ea882e1f6adfe2b"
+  },
   environment: 'localhost',
 });
 
