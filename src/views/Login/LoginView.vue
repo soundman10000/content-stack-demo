@@ -13,14 +13,28 @@ import Logo from './components/logo/component.vue'
       </div>
       <div class="row justify-content-center">
         <div class="col-6">
-          <div class="form-group label-top-left">
+          <div class="form-group label-top-left form-group">
             <label for="emailAddress" class="form-label fw-bold small">{{
               data.content.user_id_text
             }}</label>
-            <input type="text" class="form-control" id="emailAddress" v-model="data.model.userId" />
+            <input
+              @input="inputHandler"
+              type="text"
+              class="form-control"
+              :class="{ 'is-invalid': state.error }"
+              id="emailAddress"
+              v-model="data.model.userId"
+            />
+            <div v-if="state.error" class="invalid-feedback">
+              <span>Check Your Entry</span>
+            </div>
           </div>
           <div class="container mt-4">
-            <button class="col-12 btn btn-primary btn-md rounded-pill loginBtn" @click="login()">
+            <button
+              :disabled="state.error"
+              class="col-12 btn btn-primary btn-md rounded-pill loginBtn"
+              @click="login()"
+            >
               {{ data.content.log_in_text }}
             </button>
           </div>
@@ -49,24 +63,13 @@ import Logo from './components/logo/component.vue'
 
 <script>
 import './styles.css'
-import { clients } from './model'
-
-const fields = [
-  'banner',
-  'log_in_text',
-  'no_account_text',
-  'sign_up_text',
-  'title',
-  'user_id_text',
-  'welcome_text'
-]
+import { fields, validateUser } from './model'
 
 export default {
   inject: ['cmsClient'],
   setup() {},
   data: () => ({
     data: {
-      clients: clients,
       content: {},
       model: {
         userId: ''
@@ -82,7 +85,13 @@ export default {
   },
   methods: {
     login() {
-      alert(this.data.model.userId)
+      var result = validateUser(this.data.model.userId)
+      if (!result) {
+        this.state.error = true
+      }
+    },
+    inputHandler() {
+      this.state.error = false
     },
     get() {
       const onSuccess = (c) => (result) => {
