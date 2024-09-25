@@ -1,6 +1,6 @@
 import Contentstack from 'contentstack'
 import ContentstackLivePreview from '@contentstack/live-preview-utils';
-import { pick } from 'ramda'
+import { pick, prop } from 'ramda'
 import { Utils } from 'contentstack'
 
 class ContentStackClient {
@@ -11,6 +11,17 @@ class ContentStackClient {
   initializeDevelopment() {
     this.client = toClient(developmentConfig)
     enableLivePreview(developmentLivePreview)
+  }
+
+  getLogo(contentType, entryId, name) {
+    return this.client
+      .ContentType(contentType)
+      .Entry(entryId)
+      .toJSON()
+      .fetch()
+      .then(log(`Get Entry Raw ${entryId}`))
+      .then(addTags(contentType))
+      .then(prop(name))
   }
 
   getEntry(contentType, entryId, fields) {

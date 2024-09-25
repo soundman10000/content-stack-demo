@@ -1,6 +1,10 @@
+<script setup>
+import Logo from './components/logo/component.vue'
+</script>
 <template>
   <div class="row justify-content-center" v-if="state.loaded">
     <div class="col-6 bg-white p-3 rounded shadow-lg">
+      <Logo></Logo>
       <h2 class="text-center">{{ data.content.banner }}</h2>
       <div class="row justify-content-center">
         <span class="col-6">
@@ -23,7 +27,7 @@
           <div class="row mt-3">
             <span
               >{{ data.content.no_account_text }}
-              <a class="signup" :href="data.content.url">{{ data.content.sign_up_text }}</a>
+              <a class="signup" href="http://google.com">{{ data.content.sign_up_text }}</a>
             </span>
           </div>
           <div class="divider-text">
@@ -53,7 +57,6 @@ const fields = [
   'no_account_text',
   'sign_up_text',
   'title',
-  'url',
   'user_id_text',
   'welcome_text'
 ]
@@ -82,7 +85,7 @@ export default {
       alert(this.data.model.userId)
     },
     get() {
-      const onSucess = (c) => (result) => {
+      const onSuccess = (c) => (result) => {
         c.data.content = result
         c.state.loaded = true
       }
@@ -90,7 +93,7 @@ export default {
 
       this.cmsClient
         .getEntry('benefitsgo_login', 'bltf864720003c6a939', fields)
-        .then(onSucess(this), onError)
+        .then(onSuccess(this), onError)
     }
   }
 }
