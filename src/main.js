@@ -1,4 +1,6 @@
 import './assets/main.css'
+import 'bootstrap/dist/css/bootstrap.css'
+import bootstrap from 'bootstrap/dist/js/bootstrap.js'
 
 import { createApp } from 'vue'
 import App from './App.vue'
@@ -30,9 +32,8 @@ ContentstackLivePreview.init({
  },
 })
 
-const app = createApp(App)
-app.provide('csDeliveryClient', csDeliveryClient);
-
-app.use(router)
-
-app.mount('#app')
+createApp(App)
+  .provide('csDeliveryClient', csDeliveryClient)
+  .use(bootstrap)
+  .use(router)
+  .mount('#app')
