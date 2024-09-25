@@ -4,6 +4,6 @@ import './styles.css'
 
 <template>
   <footer class="footer">
-    <span class="text-muted">Powered By: Vue3, Bootstrap, Content Stack</span>
+    <span class="text-muted">Powered By: Vue3, Bootstrap, Contentstack</span>
   </footer>
 </template>

@@ -8,6 +8,7 @@
 <script>
 import './styles.css'
 import { clients } from './model'
+import { getContent, toViewModel } from './model'
 
 export default {
   inject: ['csDeliveryClient'],
@@ -17,10 +18,20 @@ export default {
       clients: clients
     },
     state: {
-      error: false
+      error: false,
+      loading: false
     }
   }),
-  mounted() {},
-  methods: {}
+  mounted() {
+    this.get()
+  },
+  methods: {
+    get() {
+      const onSucess = (comp) => (result) => toViewModel(comp.state)(comp.data)(result)
+      const onError = (d) => console.log(d, 'Error')
+
+      getContent(this.csDeliveryClient).then(onSucess(this), onError)
+    }
+  }
 }
 </script>

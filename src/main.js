@@ -16,7 +16,7 @@ const csDeliveryClient = Contentstack.Stack({
     host: "rest-preview.contentstack.com", 
     preview_token: "cs08b2313d23612772dc185b06"
   },
-  environment: 'localhost',
+  environment: 'development',
 });
 
 ContentstackLivePreview.init({
