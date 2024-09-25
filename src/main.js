@@ -2,6 +2,7 @@ import './assets/main.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import bootstrap from 'bootstrap/dist/js/bootstrap.js'
 import {createContentStackClient} from 'contentstackClient'
+import { createPinia } from 'pinia'
 
 import { createApp } from 'vue'
 import App from './App.vue'
@@ -36,6 +37,7 @@ ContentstackLivePreview.init({
 createApp(App)
   .provide('csDeliveryClient', csDeliveryClient)
   .provide('cmsClient', createContentStackClient())
+  .use(createPinia())
   .use(bootstrap)
   .use(router)
   .mount('#app')

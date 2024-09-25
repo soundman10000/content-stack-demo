@@ -14,7 +14,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
-      'contentstackClient': '/src/cms/ContentStack.js'
+      'contentstackClient': '/src/cms/contentstack.js',
+      'userStore': '/src/stores/user.js'
     }
   }
 })
