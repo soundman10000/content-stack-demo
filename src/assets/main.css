@@ -1,11 +1,19 @@
 @import './base.css';
 
+:root {
+  --footer-height: 40px;
+}
+
 #app {
   font-weight: normal;
 }
 
 @media (min-width: 1024px) {
   body {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 100px);
+    justify-content: center;
   }
 
   #app {

@@ -1,6 +1,8 @@
 <template>
-  Login asdfasdfasdfasdfsa Page
-  <button type="button" class="btn btn-primary">Primary</button>
+  <div class="centered-box bg-white p-3 rounded shadow-sm">
+    <h2>This is a thing</h2>
+    <p>Hope you're happy</p>
+  </div>
 </template>
 
 <script>
