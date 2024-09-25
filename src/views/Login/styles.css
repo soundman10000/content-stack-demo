@@ -1,0 +1,34 @@
+.loginBtn {
+  background-color: var(--empyrean-blue);
+}
+
+.divider-text {
+  position: relative;
+  text-align: center;
+  margin: 1rem 0;
+}
+.divider-text::before,
+.divider-text::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background-color: #ccc;
+}
+.divider-text::before {
+  left: 0;
+}
+.divider-text::after {
+  right: 0;
+}
+
+.signup {
+  padding-left: var(--pad-sm);
+}
+
+.btn-clear-blue {
+  background-color: transparent;
+  border: 1px solid var(--empyrean-blue);
+  color: var(--empyrean-blue);
+}
