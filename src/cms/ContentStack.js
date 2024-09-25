@@ -4,11 +4,11 @@ import { pick } from 'ramda'
 import { Utils } from 'contentstack'
 
 class ContentStackClient {
-  constructor(){
+  constructor() {
     this.initializeDevelopment()
   }
 
-  initializeDevelopment(){
+  initializeDevelopment() {
     this.client = toClient(developmentConfig)
     enableLivePreview(developmentLivePreview)
   }

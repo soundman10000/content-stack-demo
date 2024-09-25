@@ -13,10 +13,10 @@
             <label for="emailAddress" class="form-label fw-bold small">{{
               data.content.user_id_text
             }}</label>
-            <input type="text" class="form-control" id="emailAddress" />
+            <input type="text" class="form-control" id="emailAddress" v-model="data.model.userId" />
           </div>
           <div class="container mt-4">
-            <button class="col-12 btn btn-primary btn-md rounded-pill loginBtn">
+            <button class="col-12 btn btn-primary btn-md rounded-pill loginBtn" @click="login()">
               {{ data.content.log_in_text }}
             </button>
           </div>
@@ -64,7 +64,10 @@ export default {
   data: () => ({
     data: {
       clients: clients,
-      content: {}
+      content: {},
+      model: {
+        userId: ''
+      }
     },
     state: {
       error: false,
@@ -75,6 +78,9 @@ export default {
     this.get()
   },
   methods: {
+    login() {
+      alert(this.data.model.userId)
+    },
     get() {
       const onSucess = (c) => (result) => {
         c.data.content = result
