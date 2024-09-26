@@ -29,8 +29,6 @@ import { userStore } from 'userStore'
 import './styles.css'
 
 export default {
-  inject: ['cmsClient'],
-  setup() {},
   data: () => ({
     data: {
       user: userStore().user
@@ -39,8 +37,6 @@ export default {
       error: false,
       loaded: false
     }
-  }),
-  mounted() {},
-  methods: {}
+  })
 }
 </script>

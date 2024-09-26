@@ -1,10 +1,17 @@
 import { find, propEq } from 'ramda'
 
-export const users = [{
-  name: 'Jason Malley',
-  companyId: 'McDonalds',
-  email: 'jmalley@mcdonalds.com'
-}]
+export const users = [
+  {
+    name: 'Jason Malley',
+    companyId: 'McDonalds',
+    email: 'jmalley@mcdonalds.com'
+  },
+  {
+    name: 'Dan DaMan',
+    companyId: 'BurgerKing',
+    email: 'ddman@burgerking.com'
+  }
+]
 
 export const fields = [
   'banner',
