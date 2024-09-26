@@ -15,13 +15,10 @@ import Logo from './components/logo/component.vue'
       </div>
       <div class="row justify-content-center">
         <div class="col-6">
-          <div class="form-group label-top-left form-group">
-            <label
-              :data-cslp="data.$.user_id_text"
-              for="emailAddress"
-              class="form-label fw-bold small"
-              >{{ data.content.user_id_text }}</label
-            >
+          <div class="form-group label-top-left">
+            <label :data-cslp="data.$.user_id_text" for="emailAddress" class="fw-bold small">{{
+              data.content.user_id_text
+            }}</label>
             <input
               @input="inputHandler"
               type="text"
