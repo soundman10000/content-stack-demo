@@ -5,18 +5,23 @@ import Logo from './components/logo/component.vue'
   <div class="row justify-content-center" v-if="state.loaded">
     <div class="col-6 bg-white p-3 rounded shadow-lg">
       <Logo></Logo>
-      <h2 class="text-center">{{ data.content.banner }}</h2>
+      <h2 :data-cslp="data.$.banner" class="text-center">{{ data.content.banner }}</h2>
       <div class="row justify-content-center">
         <span class="col-6">
-          <p class="text-center">{{ data.content.welcome_text }}</p>
+          <p :data-cslp="data.$.welcome_text" class="text-center">
+            {{ data.content.welcome_text }}
+          </p>
         </span>
       </div>
       <div class="row justify-content-center">
         <div class="col-6">
           <div class="form-group label-top-left form-group">
-            <label for="emailAddress" class="form-label fw-bold small">{{
-              data.content.user_id_text
-            }}</label>
+            <label
+              :data-cslp="data.$.user_id_text"
+              for="emailAddress"
+              class="form-label fw-bold small"
+              >{{ data.content.user_id_text }}</label
+            >
             <input
               @input="inputHandler"
               type="text"
@@ -31,6 +36,7 @@ import Logo from './components/logo/component.vue'
           </div>
           <div class="container mt-4">
             <button
+              :data-cslp="data.$.log_in_text"
               :disabled="state.error"
               class="col-12 btn btn-primary btn-md rounded-pill loginBtn"
               @click="login()"
@@ -39,9 +45,11 @@ import Logo from './components/logo/component.vue'
             </button>
           </div>
           <div class="row mt-3">
-            <span
+            <span :data-cslp="data.$.no_account_text"
               >{{ data.content.no_account_text }}
-              <a class="signup" href="http://google.com">{{ data.content.sign_up_text }}</a>
+              <a class="signup" :data-cslp="data.$.sign_up_text" href="http://google.com">{{
+                data.content.sign_up_text
+              }}</a>
             </span>
           </div>
           <div class="divider-text">
@@ -72,6 +80,7 @@ export default {
   data: () => ({
     data: {
       content: {},
+      $: {},
       model: {
         userId: ''
       }
@@ -98,7 +107,8 @@ export default {
     },
     get() {
       const onSuccess = (c) => (result) => {
-        c.data.content = result
+        c.data.content = result.content
+        c.data.$ = result.$
         c.state.loaded = true
       }
       const onError = (d) => console.log(d, 'Error')
