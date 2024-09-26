@@ -7,12 +7,11 @@
 #app {
   font-weight: normal;
 }
-
 @media (min-width: 1024px) {
   body {
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - var(--footer-height));
     justify-content: center;
   }
 

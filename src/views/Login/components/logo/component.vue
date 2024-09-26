@@ -18,7 +18,6 @@ export default {
       content: {},
       $: {}
     },
-
     state: {
       error: false,
       loaded: false
