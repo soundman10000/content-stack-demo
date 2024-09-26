@@ -81,9 +81,7 @@ export default {
     data: {
       content: {},
       $: {},
-      model: {
-        userId: ''
-      }
+      model: {}
     },
     state: {
       error: false,

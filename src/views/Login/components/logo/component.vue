@@ -15,12 +15,8 @@ export default {
   setup() {},
   data: () => ({
     data: {
-      content: {
-        logo: ''
-      },
-      $: {
-        logo: ''
-      }
+      content: {},
+      $: {}
     },
 
     state: {
