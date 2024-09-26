@@ -73,10 +73,8 @@ import Logo from './components/logo/component.vue'
 import './styles.css'
 import { fields, validateUser } from './model'
 import { userStore } from 'userStore'
-
 export default {
   inject: ['cmsClient'],
-  setup() {},
   data: () => ({
     data: {
       content: {},
@@ -97,8 +95,10 @@ export default {
       var result = validateUser(this.data.model.userId)
       if (!result) {
         this.state.error = true
+        return
       }
       this.userStore.login(result)
+      this.$router.push('/home')
     },
     inputHandler() {
       this.state.error = false
