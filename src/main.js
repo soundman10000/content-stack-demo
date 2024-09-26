@@ -3,6 +3,12 @@ import 'bootstrap/dist/css/bootstrap.css'
 import bootstrap from 'bootstrap/dist/js/bootstrap.js'
 import {createContentStackClient} from 'contentstackClient'
 import { createPinia } from 'pinia'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { faUser, faSignInAlt, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faUserCircle } from '@fortawesome/free-regular-svg-icons';
+
+library.add(faUser, faSignInAlt, faSignOutAlt, faUserCircle);
 
 import { createApp } from 'vue'
 import App from './App.vue'
@@ -40,4 +46,5 @@ createApp(App)
   .use(createPinia())
   .use(bootstrap)
   .use(router)
+  .component('FontAwesomeIcon', FontAwesomeIcon)
   .mount('#app')
