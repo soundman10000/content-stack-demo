@@ -17,18 +17,45 @@
   border-left: var(--border);
   border-right: var(--border);
 }
+.nav {
+  display: flex;
+  border-collapse: collapse;
+}
 .nav-item {
   color: var(--empyrean-blue);
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
+  border: var(--border);
+  flex: 1;
 }
 .nav-item:hover {
   background-color: var(--empyrean-blue);
   color: var(--vt-c-white-mute);
   cursor: pointer;
-  border: var(--border);
 }
 .nav-item:last-child {
   border-right: none;
+}
+.nav-item:not(:last-child) {
+  border-right: none;
+}
+.header {
+  position: relative;
+}
+
+.icon-container {
+  position: relative;
+}
+
+.user-modal {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1000;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: fit-content;
 }

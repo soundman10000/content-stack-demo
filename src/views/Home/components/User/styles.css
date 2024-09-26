@@ -1,0 +1,35 @@
+.card {
+  border-radius: 0.25rem;
+  border: none;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.card-header {
+  background: var(--empyrean-blue);
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  font-size: 0.875rem !important;
+}
+
+.card-body {
+  width: 350px;
+  padding: 0.5rem 0.75rem !important;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem !important;
+}
+
+.form-label {
+  width: 30%;
+}
+
+.text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+}
+.card-header {
+  padding: 0.5rem 0.75rem;
+}
