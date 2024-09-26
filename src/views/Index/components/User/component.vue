@@ -20,6 +20,12 @@
           <p class="mb-0 text-muted text-truncate">{{ data.user.email }}</p>
         </div>
       </div>
+      <div class="mb-1">
+        <div class="d-flex justify-content-between align-items-center">
+          <label class="form-label fs-6 mb-0">Job:</label>
+          <p class="mb-0 text-muted text-truncate">{{ data.user.job }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>

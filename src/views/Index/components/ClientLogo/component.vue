@@ -1,6 +1,12 @@
 <template>
   <div class="image-container">
-    <img class="img-fluid h-100" :data-cslp="data.$.logo" :src="data.logo" alt="Logo" />
+    <img
+      class="img-fluid h-100"
+      v-if="data.logo"
+      :data-cslp="data.$.logo"
+      :src="data.logo"
+      alt="Logo"
+    />
   </div>
 </template>
 <script>
@@ -12,7 +18,7 @@ export default {
   data: () => ({
     data: {
       $: {},
-      logo: {},
+      logo: null,
       user: userStore().user
     },
     state: {

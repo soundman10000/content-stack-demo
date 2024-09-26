@@ -4,12 +4,14 @@ export const users = [
   {
     name: 'Jason Malley',
     companyId: 'McDonalds',
-    email: 'jmalley@mcdonalds.com'
+    email: 'jmalley@mcdonalds.com',
+    job: 'Cook'
   },
   {
     name: 'Dan DaMan',
     companyId: 'BurgerKing',
-    email: 'ddman@burgerking.com'
+    email: 'ddman@burgerking.com',
+    job: 'Manager'
   }
 ]
 
