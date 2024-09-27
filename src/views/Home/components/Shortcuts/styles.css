@@ -1,0 +1,22 @@
+.card-body {
+  height: 100%; /* Ensures the card body takes up the full height of the card */
+}
+
+.icon-wrapper {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Optional: Makes it circular */
+}
+
+.icon-image {
+  width: 100%; /* Ensures the image fills the 100x100 area */
+  height: 100%; /* Ensures the image fills the 100x100 area */
+  object-fit: contain; /* Keeps aspect ratio of the icon */
+}
+
+.card-title {
+  font-size: 14px; /* Adjust as needed */
+}

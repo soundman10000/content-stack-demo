@@ -1,3 +1,7 @@
+<script setup>
+import Shortcuts from './components/Shortcuts/component.vue'
+</script>
+
 <template>
   <div v-if="state.loaded">
     <h3 class="p-2" :data-cslp="data.$.welcome_text">
@@ -21,6 +25,9 @@
           </div>
         </div>
       </div>
+    </div>
+    <div>
+      <Shortcuts></Shortcuts>
     </div>
   </div>
 </template>
@@ -64,7 +71,6 @@ export default {
         c.data.firstName = pullFirstName(this.data.user.name)
         // TODO: linked data needs a better view model mapping. GraphQL is what is needed.
         c.data.banner = data.content.banner_image[0]
-        console.log(c.data.banner.$.banner_image['data-cslp'], 'near')
         c.state.loaded = true
       }
 
