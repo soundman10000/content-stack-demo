@@ -1,15 +1,31 @@
 <template>
-  <div class="container pt-3" v-if="state.loaded">
+  <div class="container pt-3 no-padding" v-if="state.loaded">
     <h5 :data-cslp="data.$.shortcuts_banner">{{ data.content.shortcuts_banner }}</h5>
-    <div class="container mt-4">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-3">
-        <div v-for="(item, index) in data.tileModel" :key="index" class="col">
-          <div class="card h-100 shadow-sm custom-card">
-            <div class="card-body d-flex flex-column justify-content-center align-items-center">
-              <div class="icon-wrapper">
-                <img :src="item.icon" alt="Icon for {{ item.title }}" class="icon-image" />
+    <div class="container mt-4 card-container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-3">
+        <div
+          v-for="(item, index) in data.tileModel"
+          :data-cslp="item.orderTag"
+          :key="index"
+          class="col"
+        >
+          <div class="card shadow-md health-card">
+            <div
+              class="card-body icon-card icon-body d-flex flex-column justify-content-center align-items-center text-center"
+            >
+              <div class="icon-wrapper mb-2">
+                <div class="icon-circle">
+                  <img
+                    :src="item.icon"
+                    :data-cslp="item.iconTag"
+                    alt="Icon for {{ item.title }}"
+                    class="icon-image"
+                  />
+                </div>
               </div>
-              <h6 class="card-title text-center mt-2 mb-0">{{ item.title }}</h6>
+              <h6 :data-cslp="item.titleTag" class="card-title icon-title mb-0 mt-5">
+                {{ item.title }}
+              </h6>
             </div>
           </div>
         </div>

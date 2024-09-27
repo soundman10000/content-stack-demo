@@ -54,8 +54,8 @@ export const addTags = typeId => c => {
 }
 
 export const addConditions = query => conditions => 
-  conditions.reduce((acc, cond, i, conditions) => {
-    return i < conditions.length - 1
+  conditions.reduce((acc, cond, i, conditions) => 
+    i < conditions.length - 1
       ? acc.where(cond.key, cond.value.toLowerCase()).and()
       : acc.where(cond.key, cond.value.toLowerCase()) 
-  }, query);
+  , query);
