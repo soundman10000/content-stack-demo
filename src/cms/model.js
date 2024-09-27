@@ -52,3 +52,10 @@ export const addTags = typeId => c => {
   Utils.addEditableTags(c, typeId, true, 'en-us')
   return c
 }
+
+export const addConditions = query => conditions => 
+  conditions.reduce((acc, cond, i, conditions) => {
+    return i < conditions.length - 1
+      ? acc.where(cond.key, cond.value.toLowerCase()).and()
+      : acc.where(cond.key, cond.value.toLowerCase()) 
+  }, query);
