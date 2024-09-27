@@ -49,7 +49,6 @@ export default {
         c.data.$ = data.$
         c.data.tileModel = toTilesViewModel(data.content)
         c.state.loaded = true
-        console.log(c.data.tileModel)
       }
 
       const onError = console.log
