@@ -5,13 +5,29 @@ export const users = [
     name: 'Jason Malley',
     companyId: 'McDonalds',
     email: 'jmalley@mcdonalds.com',
-    job: 'Cook'
+    job: 'Cook',
+    enrolled: ['MEDIDCAL', 'DENTAL', 'VISION']
   },
   {
-    name: 'Dan DaMan',
+    name: 'Carlos GoBoncan',
     companyId: 'BurgerKing',
-    email: 'ddman@burgerking.com',
-    job: 'Manager'
+    email: 'cgoboncan@burgerking.com',
+    job: 'Cook',
+    enrolled: ['DENTAL', 'VISION']
+  },
+  {
+    name: 'Sandhya Gopalakrishnan',
+    companyId: 'McDonalds',
+    email: 'sgopalakrishnan@mcdonalds.com',
+    job: 'Manager',
+    enrolled: ['DENTAL']
+  },
+  {
+    name: 'Lisbeth Ruiz',
+    companyId: 'BurgerKing',
+    email: 'lruiz@burgerking.com',
+    job: 'Manager',
+    enrolled: []
   }
 ]
 

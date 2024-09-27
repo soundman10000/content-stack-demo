@@ -5,7 +5,7 @@ import Header from './components/Header/component.vue'
 <template>
   <div class="mainContent shadow-lg">
     <Header></Header>
-    <div class="container-fluid">
+    <div class="container-fluid indexView">
       <div class="row">
         <div class="col-1"></div>
         <div class="col-10">
