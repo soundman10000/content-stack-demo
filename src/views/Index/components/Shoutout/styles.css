@@ -1,0 +1,28 @@
+:root {
+  --shoutout-height: 60px;
+}
+
+.shoutout {
+  background-color: var(--vt-c-white-mute);
+  height: var(--shoutout-height);
+}
+
+.shoutout h5 {
+  margin-left: var(--margin-xs) !important;
+}
+
+.btn-clear {
+  background-color: transparent;
+  border: 2px solid;
+  margin-right: 75px;
+  transition:
+    background-color 0.3s,
+    border-color 0.3s,
+    color 0.3s;
+}
+
+.btn-clear:hover {
+  background-color: var(--hover-background-color) !important;
+  border-color: var(--hover-border-color) !important;
+  color: var(--hover-text-color) !important;
+}

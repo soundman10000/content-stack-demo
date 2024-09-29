@@ -6,6 +6,7 @@ export const users = [
     companyId: 'McDonalds',
     email: 'jmalley@mcdonalds.com',
     job: 'Cook',
+    eligible: true,
     enrolled: ['MEDIDCAL', 'DENTAL', 'VISION']
   },
   {
@@ -13,13 +14,15 @@ export const users = [
     companyId: 'BurgerKing',
     email: 'cgoboncan@burgerking.com',
     job: 'Cook',
-    enrolled: ['DENTAL', 'VISION']
+    eligible: false,
+    enrolled: []
   },
   {
     name: 'Sandhya Gopalakrishnan',
     companyId: 'McDonalds',
     email: 'sgopalakrishnan@mcdonalds.com',
     job: 'Manager',
+    eligible: true,
     enrolled: ['DENTAL']
   },
   {
@@ -27,6 +30,7 @@ export const users = [
     companyId: 'BurgerKing',
     email: 'lruiz@burgerking.com',
     job: 'Manager',
+    eligible: false,
     enrolled: []
   }
 ]
