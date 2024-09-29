@@ -68,6 +68,9 @@ export default {
       const onSuccess = (c) => (data) => {
         c.data.content = data.content
         c.data.$ = data.$
+        if (!data.content) {
+          return
+        }
         c.data.color = toColorModel(colorFields)(c.data.content)
         c.state.loaded = true
       }

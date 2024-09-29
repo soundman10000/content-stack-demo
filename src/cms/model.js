@@ -43,10 +43,12 @@ const extractCslp = (data) =>
       assoc(k, data[k]['data-cslp'], res), 
       {}, keys(data));
 
-export const toModel = fields => c => ({
-  content: pick(fields)(c),
-  $: pullTags(fields)(c)
-})
+export const toModel = fields => c => 
+  c ? ({
+      content: pick(fields)(c),
+      $: pullTags(fields)(c)
+    })
+    : ({})
 
 export const addTags = typeId => c => {
   Utils.addEditableTags(c, typeId, true, 'en-us')

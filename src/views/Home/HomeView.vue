@@ -1,5 +1,6 @@
 <script setup>
 import Shortcuts from './components/Shortcuts/component.vue'
+import Reminders from './components/Reminders/component.vue'
 </script>
 
 <template>
@@ -26,9 +27,8 @@ import Shortcuts from './components/Shortcuts/component.vue'
         </div>
       </div>
     </div>
-    <div>
-      <Shortcuts></Shortcuts>
-    </div>
+    <Shortcuts></Shortcuts>
+    <Reminders></Reminders>
   </div>
 </template>
 <script>
