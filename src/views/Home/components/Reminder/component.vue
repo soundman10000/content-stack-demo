@@ -1,5 +1,5 @@
 <template>
-  <div v-if="state.loaded" class="reminder mb-2">
+  <div v-if="state.loaded && state.showInfo" class="reminder mb-2">
     <div class="cardBodyReminder">
       <div :data-cslp="data.$.information['data-cslp']" class="card-text text">
         {{ data.content.information }}
@@ -20,9 +20,9 @@
 <script>
 import { userStore } from 'userStore'
 import './styles.css'
-import { toModel } from './model'
+import { toModel, showInfo } from './model'
 
-const fields = ['call_to_action', 'information', '$']
+const fields = ['call_to_action', 'information', 'taxonomies', '$']
 
 export default {
   inject: ['cmsClient'],
@@ -41,7 +41,8 @@ export default {
     },
     state: {
       error: false,
-      loaded: false
+      loaded: false,
+      showInfo: true
     }
   }),
   mounted() {
@@ -53,6 +54,7 @@ export default {
         c.data.content = result
         c.data.$ = result.$
         c.state.loaded = true
+        c.state.showInfo = showInfo(c.data.user.enrolled)(result.taxonomies)
       }
       const onError = (d) => console.log(d, 'Error')
 

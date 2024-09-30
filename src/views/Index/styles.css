@@ -6,10 +6,13 @@
 }
 .indexView {
   padding-top: var(--pad-xs);
+  padding-bottom: var(--pad-lg);
   flex-grow: 1;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .routerViewContainer {
   height: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
 }

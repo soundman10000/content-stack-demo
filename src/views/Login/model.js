@@ -6,31 +6,27 @@ export const users = [
     companyId: 'McDonalds',
     email: 'jmalley@mcdonalds.com',
     job: 'Cook',
-    eligible: true,
-    enrolled: ['MEDIDCAL', 'DENTAL', 'VISION']
+    enrolled: ['MEDIDCAL']
   },
   {
     name: 'Carlos GoBoncan',
     companyId: 'BurgerKing',
     email: 'cgoboncan@burgerking.com',
     job: 'Cook',
-    eligible: false,
-    enrolled: []
+    enrolled: ['MEDICAL']
   },
   {
     name: 'Sandhya Gopalakrishnan',
     companyId: 'McDonalds',
     email: 'sgopalakrishnan@mcdonalds.com',
     job: 'Manager',
-    eligible: true,
-    enrolled: ['DENTAL']
+    enrolled: []
   },
   {
     name: 'Lisbeth Ruiz',
     companyId: 'BurgerKing',
     email: 'lruiz@burgerking.com',
     job: 'Manager',
-    eligible: false,
     enrolled: []
   }
 ]
