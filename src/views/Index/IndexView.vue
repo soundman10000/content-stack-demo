@@ -7,14 +7,13 @@ import Shoutout from './components/Shoutout/component.vue'
   <div class="mainContent shadow-lg">
     <Header></Header>
     <Shoutout></Shoutout>
-    <div class="container-fluid indexView">
+    <div class="indexView">
       <div class="row">
         <div class="col-1"></div>
-        <div
-          class="col-10"
-          style="height: calc(100vh - 100px); overflow-y: auto; overflow-x: hidden"
-        >
-          <router-view></router-view>
+        <div class="col-10">
+          <div class="routerViewContainer">
+            <router-view></router-view>
+          </div>
         </div>
         <div class="col-1"></div>
       </div>

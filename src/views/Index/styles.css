@@ -1,7 +1,15 @@
 .mainContent {
   height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-
 .indexView {
   padding-top: var(--pad-xs);
+  flex-grow: 1;
+  overflow: auto;
+}
+.routerViewContainer {
+  height: 100%;
+  overflow-y: auto;
 }
