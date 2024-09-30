@@ -1,14 +1,15 @@
-.card-body-reminder {
+.cardBodyReminder {
   padding: var(--pad-sm) !important;
 }
-
 .text {
   font-size: 12px;
   line-height: 1.6; /* Slightly more readable than 0.8 */
   letter-spacing: -0.02em; /* Brings characters slightly closer */
 }
-
 .reminder {
   border: 2px solid var(--vt-c-divider-light-2);
   border-radius: 10px;
+}
+.btnContainer {
+  text-align: center;
 }

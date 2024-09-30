@@ -1,10 +1,10 @@
 <template>
   <div v-if="state.loaded" class="reminder mb-2">
-    <div class="card-body-reminder">
+    <div class="cardBodyReminder">
       <div :data-cslp="data.$.information['data-cslp']" class="card-text text">
         {{ data.content.information }}
       </div>
-      <div style="text-align: center">
+      <div class="btnContainer">
         <a
           :href="data.content.call_to_action.href"
           :data-cslp="data.content.call_to_action.$.title['data-cslp']"
@@ -50,7 +50,6 @@ export default {
   methods: {
     get() {
       const onSuccess = (c) => (result) => {
-        console.log(result, 'asjdflkasjdlkfj')
         c.data.content = result
         c.data.$ = result.$
         c.state.loaded = true

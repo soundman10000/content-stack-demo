@@ -4,5 +4,4 @@ export const homeRoutes = [{
   path: "",
   name: "home",
   component: HomeView,
-}
-]
+}]
