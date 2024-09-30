@@ -43,7 +43,6 @@ export default {
       const onSuccess = (c) => (data) => {
         c.data.content = data.content
         c.data.$ = data.$
-        console.log(data.content.reminders)
         c.data.reminders = toReminderModel(data.content.reminders ?? [])
         c.state.loaded = true
       }
